@@ -1,29 +1,29 @@
-# Employee Management API
+# Employee Management API  
 
-## Overview
+## Overview  
 
-The **Employee Management API** is a RESTful API built with **.NET 8**, following modern best practices such as **SOLID principles**, **Entity Framework Core**, and **JWT authentication**. It allows users to perform **CRUD (Create, Read, Update, Delete)** operations on employee records securely.
+The **Employee Management API** is a RESTful API built with **.NET 9**, following modern best practices such as **SOLID principles**, **Entity Framework Core**, and **JWT authentication**. It allows users to perform **CRUD (Create, Read, Update, Delete)** operations on employee records securely.  
 
-## Features
+## Features  
 
-✅ Employee CRUD operations
-✅ JWT-based authentication
-✅ Entity Framework Core for database interactions
-✅ SOLID and OOP principles
-✅ Swagger API documentation
+✅ Employee CRUD operations  
+✅ JWT-based authentication  
+✅ Entity Framework Core for database interactions  
+✅ SOLID and OOP principles  
+✅ Swagger API documentation  
 
----
+---  
 
-## 🛠 Tech Stack
+## 🛠 Tech Stack  
 
-- **.NET 8 Web API**
-- **Entity Framework Core** (SQL Server)
-- **JWT Authentication**
-- **Swagger (OpenAPI)**
+- **.NET 9 Web API**  
+- **Entity Framework Core** (SQL Server)  
+- **JWT Authentication**  
+- **Swagger (OpenAPI)**  
 
----
+---  
 
-## 📂 Project Structure
+## 📂 Project Structure  
 
 ```
 Employee_Management/
@@ -42,72 +42,72 @@ Employee_Management/
 │
 │-- appsettings.json           # App configuration (DB connection, JWT settings)
 │-- Program.cs                 # Entry point of the application
-```
+```  
 
----
+---  
 
-## 🚀 Getting Started
+## 🚀 Getting Started  
 
-### 1️⃣ Prerequisites
+### 1️⃣ Prerequisites  
 
-- .NET 8 SDK
-- SQL Server (or SQLite for development)
+- .NET 9 SDK  
+- SQL Server (or SQLite for development)  
 
-### 2️⃣ Setup & Configuration
+### 2️⃣ Setup & Configuration  
 
-1. Clone the repository:
+1. Clone the repository:  
    ```sh
    git clone https://github.com/your-repo/employee-management.git
    cd employee-management
    ```
-2. Update **appsettings.json** with your SQL Server connection string and JWT settings.
-3. Run database migrations:
+2. Update **appsettings.json** with your SQL Server connection string and JWT settings.  
+3. Run database migrations:  
    ```sh
    dotnet ef database update
    ```
-4. Run the API:
+4. Run the API:  
    ```sh
    dotnet run
    ```
 
----
+---  
 
-## 🔄 API Endpoints & Responses
+## 🔄 API Endpoints & Responses  
 
-### 🔹 Authentication
+### 🔹 Authentication  
 
-**Login (Get JWT Token)**
+**Login (Get JWT Token)**  
 
 ```
 POST /api/auth/login
-```
+```  
 
-**Request:**
+**Request:**  
 
 ```json
 {
   "username": "admin",
   "password": "password123"
 }
-```
+```  
 
-**Response:**
+**Response:**  
 
 ```json
 {
   "token": "eyJhbGciOiJIUzI1..."
 }
-```
+```  
 
-### 🔹 Employees CRUD
+### 🔹 Employees CRUD  
 
-**1️⃣ Get All Employees**
+**1️⃣ Get All Employees**  
 
 ```
 GET /api/employees
-```
+```  
 
-**Response:**
+**Response:**  
 
 ```json
 {
@@ -123,15 +123,15 @@ GET /api/employees
     }
   ]
 }
-```
+```  
 
-**2️⃣ Get Employee by ID**
+**2️⃣ Get Employee by ID**  
 
 ```
 GET /api/employees/{id}
-```
+```  
 
-**Response:**
+**Response:**  
 
 ```json
 {
@@ -145,15 +145,15 @@ GET /api/employees/{id}
     "salary": 70000
   }
 }
-```
+```  
 
-**3️⃣ Create Employee**
+**3️⃣ Create Employee**  
 
 ```
 POST /api/employees
-```
+```  
 
-**Request:**
+**Request:**  
 
 ```json
 {
@@ -164,9 +164,9 @@ POST /api/employees
   "position": "Manager",
   "salary": 90000
 }
-```
+```  
 
-**Response:**
+**Response:**  
 
 ```json
 {
@@ -181,15 +181,15 @@ POST /api/employees
     "salary": 90000
   }
 }
-```
+```  
 
-**4️⃣ Update Employee**
+**4️⃣ Update Employee**  
 
 ```
 PUT /api/employees/{id}
-```
+```  
 
-**Request:**
+**Request:**  
 
 ```json
 {
@@ -198,9 +198,9 @@ PUT /api/employees/{id}
   "position": "Senior Manager",
   "salary": 95000
 }
-```
+```  
 
-**Response:**
+**Response:**  
 
 ```json
 {
@@ -215,46 +215,46 @@ PUT /api/employees/{id}
     "salary": 95000
   }
 }
-```
+```  
 
-**5️⃣ Delete Employee**
+**5️⃣ Delete Employee**  
 
 ```
 DELETE /api/employees/{id}
-```
+```  
 
-**Response:**
+**Response:**  
 
 ```json
 {
   "status": "success",
   "message": "Employee deleted successfully"
 }
-```
+```  
 
----
+---  
 
-## 🔐 Authentication & Security
+## 🔐 Authentication & Security  
 
-- Uses **JWT Authentication**.
-- Requires a valid **Bearer Token** for accessing employee CRUD endpoints.
-- Tokens expire after a set period (configurable in `appsettings.json`).
+- Uses **JWT Authentication**.  
+- Requires a valid **Bearer Token** for accessing employee CRUD endpoints.  
+- Tokens expire after a set period (configurable in `appsettings.json`).  
 
----
+---  
 
-## 📜 API Documentation
+## 📜 API Documentation  
 
-Swagger is enabled for API testing.
+Swagger is enabled for API testing.  
 
-- Visit: `https://localhost:5001/swagger`
-- Allows testing endpoints directly from the browser.
-- If you are familiar with **Postman**, you can also use it to test API endpoints easily.
+- Visit: `https://localhost:5001/swagger`  
+- Allows testing endpoints directly from the browser.  
+- If you are familiar with **Postman**, you can also use it to test API endpoints easily.  
 
----
+---  
 
-## 🤝 Contribution Guidelines
+## 🤝 Contribution Guidelines  
 
-1. Fork the repository
-2. Create a new branch (`feature-xyz`)
-3. Commit changes and push to the branch
-4. Open a Pull Request 🚀
+1. Fork the repository  
+2. Create a new branch (`feature-xyz`)  
+3. Commit changes and push to the branch  
+4. Open a Pull Request 🚀  
